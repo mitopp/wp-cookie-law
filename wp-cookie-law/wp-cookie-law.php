@@ -15,7 +15,7 @@
  * @package     Plugin | WP Cookie Law
  * @subpackage  WordPress Plugins
  * @author      Michael Topp <blog@codeschobser.de>
- * @version     $Id: wp-cookie-law.php,v 0.0.1 02.09.2014 09:57:50 mitopp Exp $;
+ * @version     $Id: wp-cookie-law.php,v 1.0.1 02.09.2014 11:45:50 mitopp Exp $;
  */
 
 // If this file is called directly, abort.
@@ -30,7 +30,7 @@ if ( ! class_exists( 'WP_Cookie_Law' ) )
     {
         /**
          * Plugin version, used for cache-busting of style and script file references.
-         * @since   0.0.1
+         * @since   1.0.0
          * @var     string
          */
         const VERSION = '1.0.1';
@@ -86,6 +86,7 @@ if ( ! class_exists( 'WP_Cookie_Law' ) )
 
             return self::$instance;
         }
+
         /**
          * Load the plugin text domain for translation.
          * @access  public
@@ -164,4 +165,5 @@ if ( ! class_exists( 'WP_Cookie_Law' ) )
     }
 }
 
+// Initialize plugin
 add_action( 'plugins_loaded', array( 'WP_Cookie_Law', 'get_instance' ) );
